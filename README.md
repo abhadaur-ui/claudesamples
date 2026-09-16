@@ -57,3 +57,4 @@ of the pipeline:
 The manual-trigger recommendation also carries over unchanged: a developer kicks off
 each next step by hand for now — no GitHub Actions wiring until this has run cleanly
 a few times (slide 8, "Day one: manual trigger").
+"# test" 
