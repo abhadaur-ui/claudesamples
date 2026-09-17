@@ -1,0 +1,952 @@
+{
+  "feature": "authentication-ui",
+  "source": {
+    "file_key": "ehm86HJ49MkaEuOzvITTpW",
+    "node_id": "1:202",
+    "figma_url": "https://www.figma.com/design/ehm86HJ49MkaEuOzvITTpW/Modern-Login-Page-UI-Template--Free---Community-?node-id=1-202&p=f&t=WyXnJyfDpe7RRdgk-0"
+  },
+  "frame_name": "Cover",
+  "nodes": [
+    {
+      "id": "1:202",
+      "name": "Cover",
+      "type": "CANVAS"
+    },
+    {
+      "id": "1:339",
+      "name": "Main",
+      "type": "FRAME",
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 1920,
+        "height": 1147
+      }
+    },
+    {
+      "id": "1:340",
+      "name": "Gradient",
+      "type": "RECTANGLE",
+      "box": {
+        "x": 0,
+        "y": -53,
+        "width": 1920,
+        "height": 1200
+      }
+    },
+    {
+      "id": "1:341",
+      "name": "Container",
+      "type": "FRAME",
+      "box": {
+        "x": 462,
+        "y": 367,
+        "width": 450,
+        "height": 413
+      }
+    },
+    {
+      "id": "1:342",
+      "name": "SVG",
+      "type": "FRAME",
+      "box": {
+        "x": 462,
+        "y": 420,
+        "width": 24,
+        "height": 24
+      }
+    },
+    {
+      "id": "1:343",
+      "name": "Vector",
+      "type": "VECTOR",
+      "box": {
+        "x": 464,
+        "y": 423,
+        "width": 20,
+        "height": 19
+      }
+    },
+    {
+      "id": "1:344",
+      "name": "Adaptable performance",
+      "type": "TEXT",
+      "box": {
+        "x": 502,
+        "y": 420,
+        "width": 159,
+        "height": 21
+      },
+      "text": "Adaptable performance"
+    },
+    {
+      "id": "1:345",
+      "name": "Our product effortlessly adjusts to your needs, boosting efficiency and simplifying your tasks.",
+      "type": "TEXT",
+      "box": {
+        "x": 502,
+        "y": 447,
+        "width": 370,
+        "height": 37
+      },
+      "text": "Our product effortlessly adjusts to your needs, boosting\nefficiency and simplifying your tasks."
+    },
+    {
+      "id": "1:346",
+      "name": "SVG",
+      "type": "FRAME",
+      "box": {
+        "x": 462,
+        "y": 518,
+        "width": 24,
+        "height": 24
+      }
+    },
+    {
+      "id": "1:347",
+      "name": "Vector",
+      "type": "VECTOR",
+      "box": {
+        "x": 465,
+        "y": 521,
+        "width": 19,
+        "height": 18
+      }
+    },
+    {
+      "id": "1:348",
+      "name": "Built to last",
+      "type": "TEXT",
+      "box": {
+        "x": 502,
+        "y": 518,
+        "width": 75,
+        "height": 21
+      },
+      "text": "Built to last"
+    },
+    {
+      "id": "1:349",
+      "name": "Experience unmatched durability that goes above and beyond with lasting investment.",
+      "type": "TEXT",
+      "box": {
+        "x": 502,
+        "y": 545,
+        "width": 410,
+        "height": 37
+      },
+      "text": "Experience unmatched durability that goes above and beyond\nwith lasting investment."
+    },
+    {
+      "id": "1:350",
+      "name": "SVG",
+      "type": "FRAME",
+      "box": {
+        "x": 462,
+        "y": 616,
+        "width": 24,
+        "height": 24
+      }
+    },
+    {
+      "id": "1:351",
+      "name": "Vector",
+      "type": "VECTOR",
+      "box": {
+        "x": 463,
+        "y": 618,
+        "width": 22,
+        "height": 19
+      }
+    },
+    {
+      "id": "1:352",
+      "name": "Great user experience",
+      "type": "TEXT",
+      "box": {
+        "x": 502,
+        "y": 616,
+        "width": 149,
+        "height": 21
+      },
+      "text": "Great user experience"
+    },
+    {
+      "id": "1:353",
+      "name": "Integrate our product into your routine with an intuitive and easy-to-use interface.",
+      "type": "TEXT",
+      "box": {
+        "x": 502,
+        "y": 643,
+        "width": 390,
+        "height": 37
+      },
+      "text": "Integrate our product into your routine with an intuitive and\neasy-to-use interface."
+    },
+    {
+      "id": "1:354",
+      "name": "SVG",
+      "type": "FRAME",
+      "box": {
+        "x": 462,
+        "y": 714,
+        "width": 24,
+        "height": 24
+      }
+    },
+    {
+      "id": "1:355",
+      "name": "Vector",
+      "type": "VECTOR",
+      "box": {
+        "x": 464,
+        "y": 716,
+        "width": 20,
+        "height": 20
+      }
+    },
+    {
+      "id": "1:356",
+      "name": "Innovative functionality",
+      "type": "TEXT",
+      "box": {
+        "x": 502,
+        "y": 714,
+        "width": 157,
+        "height": 21
+      },
+      "text": "Innovative functionality"
+    },
+    {
+      "id": "1:357",
+      "name": "Stay ahead with features that set new standards, addressing your evolving needs better than the rest.",
+      "type": "TEXT",
+      "box": {
+        "x": 502,
+        "y": 741,
+        "width": 402,
+        "height": 37
+      },
+      "text": "Stay ahead with features that set new standards, addressing\nyour evolving needs better than the rest."
+    },
+    {
+      "id": "1:358",
+      "name": "png-transparent-wing-blue-icon-blue-wings-blue-simple-logo-thumbnail 1",
+      "type": "RECTANGLE",
+      "box": {
+        "x": 526,
+        "y": 435,
+        "width": 360,
+        "height": 360
+      }
+    },
+    {
+      "id": "1:359",
+      "name": "Background+Border+Shadow",
+      "type": "FRAME",
+      "box": {
+        "x": 1008,
+        "y": 282,
+        "width": 450,
+        "height": 584
+      }
+    },
+    {
+      "id": "1:360",
+      "name": "Heading 1 \u2192 Sign in",
+      "type": "TEXT",
+      "box": {
+        "x": 1041,
+        "y": 320,
+        "width": 113,
+        "height": 41
+      },
+      "text": "Sign in"
+    },
+    {
+      "id": "1:361",
+      "name": "Form",
+      "type": "FRAME",
+      "box": {
+        "x": 1041,
+        "y": 382,
+        "width": 384,
+        "height": 301
+      }
+    },
+    {
+      "id": "1:362",
+      "name": "Label \u2192 Email",
+      "type": "TEXT",
+      "box": {
+        "x": 1041,
+        "y": 382,
+        "width": 36,
+        "height": 20
+      },
+      "text": "Email"
+    },
+    {
+      "id": "1:363",
+      "name": "Background+Border",
+      "type": "FRAME",
+      "box": {
+        "x": 1041,
+        "y": 410,
+        "width": 384,
+        "height": 40
+      }
+    },
+    {
+      "id": "1:364",
+      "name": "Input",
+      "type": "FRAME",
+      "box": {
+        "x": 1054,
+        "y": 420,
+        "width": 358,
+        "height": 20
+      }
+    },
+    {
+      "id": "1:365",
+      "name": "Container",
+      "type": "FRAME",
+      "box": {
+        "x": 1054,
+        "y": 422,
+        "width": 358,
+        "height": 17
+      }
+    },
+    {
+      "id": "1:366",
+      "name": "your@email.com",
+      "type": "TEXT",
+      "box": {
+        "x": 1054,
+        "y": 422,
+        "width": 111,
+        "height": 17
+      },
+      "text": "your@email.com"
+    },
+    {
+      "id": "1:367",
+      "name": "Fieldset",
+      "type": "FRAME",
+      "box": {
+        "x": 1042,
+        "y": 406,
+        "width": 382,
+        "height": 43
+      }
+    },
+    {
+      "id": "1:368",
+      "name": "Label \u2192 Password",
+      "type": "TEXT",
+      "box": {
+        "x": 1041,
+        "y": 466,
+        "width": 65,
+        "height": 20
+      },
+      "text": "Password"
+    },
+    {
+      "id": "1:369",
+      "name": "Button",
+      "type": "FRAME",
+      "box": {
+        "x": 1271,
+        "y": 466,
+        "width": 154,
+        "height": 20
+      }
+    },
+    {
+      "id": "1:370",
+      "name": "Horizontal Divider",
+      "type": "RECTANGLE",
+      "box": {
+        "x": 1271,
+        "y": 485,
+        "width": 154,
+        "height": 1
+      }
+    },
+    {
+      "id": "1:371",
+      "name": "Forgot your password?",
+      "type": "TEXT",
+      "box": {
+        "x": 1271,
+        "y": 467,
+        "width": 154,
+        "height": 17
+      },
+      "text": "Forgot your password?"
+    },
+    {
+      "id": "1:372",
+      "name": "Background+Border",
+      "type": "FRAME",
+      "box": {
+        "x": 1041,
+        "y": 494,
+        "width": 384,
+        "height": 40
+      }
+    },
+    {
+      "id": "1:373",
+      "name": "Input",
+      "type": "FRAME",
+      "box": {
+        "x": 1054,
+        "y": 504,
+        "width": 358,
+        "height": 20
+      }
+    },
+    {
+      "id": "1:374",
+      "name": "Container",
+      "type": "FRAME",
+      "box": {
+        "x": 1054,
+        "y": 506,
+        "width": 358,
+        "height": 17
+      }
+    },
+    {
+      "id": "1:375",
+      "name": "\u2022\u2022\u2022\u2022\u2022\u2022",
+      "type": "TEXT",
+      "box": {
+        "x": 1054,
+        "y": 506,
+        "width": 48,
+        "height": 17
+      },
+      "text": "\u2022\u2022\u2022\u2022\u2022\u2022"
+    },
+    {
+      "id": "1:376",
+      "name": "Fieldset",
+      "type": "FRAME",
+      "box": {
+        "x": 1042,
+        "y": 490,
+        "width": 382,
+        "height": 43
+      }
+    },
+    {
+      "id": "1:377",
+      "name": "Label",
+      "type": "FRAME",
+      "box": {
+        "x": 1030,
+        "y": 550,
+        "width": 379,
+        "height": 40
+      }
+    },
+    {
+      "id": "1:378",
+      "name": "Remember me",
+      "type": "TEXT",
+      "box": {
+        "x": 1070,
+        "y": 560,
+        "width": 96,
+        "height": 21
+      },
+      "text": "Remember me"
+    },
+    {
+      "id": "1:379",
+      "name": "Overlay+Border+Shadow",
+      "type": "FRAME",
+      "box": {
+        "x": 1040,
+        "y": 560,
+        "width": 20,
+        "height": 20
+      }
+    },
+    {
+      "id": "1:380",
+      "name": "SVG",
+      "type": "FRAME",
+      "box": {
+        "x": 1038,
+        "y": 558,
+        "width": 24,
+        "height": 24
+      }
+    },
+    {
+      "id": "1:381",
+      "name": "Vector",
+      "type": "VECTOR",
+      "box": {
+        "x": 1041,
+        "y": 561,
+        "width": 18,
+        "height": 18
+      }
+    },
+    {
+      "id": "1:382",
+      "name": "Button",
+      "type": "FRAME",
+      "box": {
+        "x": 1041,
+        "y": 606,
+        "width": 384,
+        "height": 40
+      }
+    },
+    {
+      "id": "1:383",
+      "name": "Sign in",
+      "type": "TEXT",
+      "box": {
+        "x": 1210,
+        "y": 617,
+        "width": 46,
+        "height": 17
+      },
+      "text": "Sign in"
+    },
+    {
+      "id": "1:384",
+      "name": "Don't have an account?",
+      "type": "TEXT",
+      "box": {
+        "x": 1128,
+        "y": 664,
+        "width": 160,
+        "height": 17
+      },
+      "text": "Don't have an account? "
+    },
+    {
+      "id": "1:385",
+      "name": "Link",
+      "type": "FRAME",
+      "box": {
+        "x": 1288,
+        "y": 664,
+        "width": 50,
+        "height": 17
+      }
+    },
+    {
+      "id": "1:386",
+      "name": "Horizontal Divider",
+      "type": "RECTANGLE",
+      "box": {
+        "x": 1288,
+        "y": 680,
+        "width": 50,
+        "height": 1
+      }
+    },
+    {
+      "id": "1:387",
+      "name": "Sign up",
+      "type": "TEXT",
+      "box": {
+        "x": 1288,
+        "y": 664,
+        "width": 51,
+        "height": 17
+      },
+      "text": "Sign up"
+    },
+    {
+      "id": "1:388",
+      "name": "Separator",
+      "type": "FRAME",
+      "box": {
+        "x": 1041,
+        "y": 699,
+        "width": 384,
+        "height": 21
+      }
+    },
+    {
+      "id": "1:389",
+      "name": "Horizontal Divider",
+      "type": "RECTANGLE",
+      "box": {
+        "x": 1041,
+        "y": 709,
+        "width": 176,
+        "height": 1
+      }
+    },
+    {
+      "id": "1:390",
+      "name": "or",
+      "type": "TEXT",
+      "box": {
+        "x": 1226,
+        "y": 699,
+        "width": 14,
+        "height": 21
+      },
+      "text": "or"
+    },
+    {
+      "id": "1:391",
+      "name": "Horizontal Divider",
+      "type": "RECTANGLE",
+      "box": {
+        "x": 1249,
+        "y": 709,
+        "width": 176,
+        "height": 1
+      }
+    },
+    {
+      "id": "1:392",
+      "name": "Button",
+      "type": "FRAME",
+      "box": {
+        "x": 1041,
+        "y": 736,
+        "width": 384,
+        "height": 40
+      }
+    },
+    {
+      "id": "1:393",
+      "name": "SVG",
+      "type": "FRAME",
+      "box": {
+        "x": 1153,
+        "y": 746,
+        "width": 20,
+        "height": 20
+      }
+    },
+    {
+      "id": "1:394",
+      "name": "Vector",
+      "type": "VECTOR",
+      "box": {
+        "x": 1163,
+        "y": 755,
+        "width": 10,
+        "height": 9
+      }
+    },
+    {
+      "id": "1:395",
+      "name": "Vector",
+      "type": "VECTOR",
+      "box": {
+        "x": 1154,
+        "y": 758,
+        "width": 16,
+        "height": 8
+      }
+    },
+    {
+      "id": "1:396",
+      "name": "Vector",
+      "type": "VECTOR",
+      "box": {
+        "x": 1153,
+        "y": 752,
+        "width": 4,
+        "height": 9
+      }
+    },
+    {
+      "id": "1:397",
+      "name": "Vector",
+      "type": "VECTOR",
+      "box": {
+        "x": 1154,
+        "y": 746,
+        "width": 16,
+        "height": 8
+      }
+    },
+    {
+      "id": "1:398",
+      "name": "Sign in with Google",
+      "type": "TEXT",
+      "box": {
+        "x": 1181,
+        "y": 747,
+        "width": 129,
+        "height": 17
+      },
+      "text": "Sign in with Google"
+    },
+    {
+      "id": "1:399",
+      "name": "Button",
+      "type": "FRAME",
+      "box": {
+        "x": 1041,
+        "y": 792,
+        "width": 384,
+        "height": 40
+      }
+    },
+    {
+      "id": "1:400",
+      "name": "SVG",
+      "type": "FRAME",
+      "box": {
+        "x": 1144,
+        "y": 802,
+        "width": 20,
+        "height": 20
+      }
+    },
+    {
+      "id": "1:401",
+      "name": "Vector",
+      "type": "VECTOR",
+      "box": {
+        "x": 1144,
+        "y": 802,
+        "width": 20,
+        "height": 20
+      }
+    },
+    {
+      "id": "1:402",
+      "name": "Vector",
+      "type": "VECTOR",
+      "box": {
+        "x": 1150,
+        "y": 806,
+        "width": 9,
+        "height": 16
+      }
+    },
+    {
+      "id": "1:403",
+      "name": "Sign in with Facebook",
+      "type": "TEXT",
+      "box": {
+        "x": 1172,
+        "y": 803,
+        "width": 147,
+        "height": 17
+      },
+      "text": "Sign in with Facebook"
+    },
+    {
+      "id": "1:404",
+      "name": "4375011_logo_netflix_icon 1",
+      "type": "RECTANGLE",
+      "box": {
+        "x": 441,
+        "y": 292,
+        "width": 100,
+        "height": 100
+      }
+    },
+    {
+      "id": "1:416",
+      "name": "FREE",
+      "type": "TEXT",
+      "box": {
+        "x": 490,
+        "y": 865,
+        "width": 1138,
+        "height": 255
+      },
+      "text": "FREE"
+    },
+    {
+      "id": "1:406",
+      "name": "Free Figma Community File",
+      "type": "TEXT",
+      "box": {
+        "x": 13,
+        "y": 226,
+        "width": 790,
+        "height": 68
+      },
+      "text": "Free Figma Community File"
+    },
+    {
+      "id": "1:408",
+      "name": "Figma",
+      "type": "TEXT",
+      "box": {
+        "x": 177,
+        "y": 97,
+        "width": 276,
+        "height": 113
+      },
+      "text": "Figma"
+    },
+    {
+      "id": "1:409",
+      "name": "Figma",
+      "type": "FRAME",
+      "box": {
+        "x": 13,
+        "y": 84,
+        "width": 116,
+        "height": 116
+      }
+    },
+    {
+      "id": "1:410",
+      "name": "Group",
+      "type": "GROUP",
+      "box": {
+        "x": 72,
+        "y": 109,
+        "width": 58,
+        "height": 87
+      }
+    },
+    {
+      "id": "1:411",
+      "name": "Vector",
+      "type": "VECTOR",
+      "box": {
+        "x": 72,
+        "y": 167,
+        "width": 29,
+        "height": 29
+      }
+    },
+    {
+      "id": "1:412",
+      "name": "Vector",
+      "type": "VECTOR",
+      "box": {
+        "x": 72,
+        "y": 138,
+        "width": 29,
+        "height": 29
+      }
+    },
+    {
+      "id": "1:413",
+      "name": "Vector",
+      "type": "VECTOR",
+      "box": {
+        "x": 72,
+        "y": 109,
+        "width": 29,
+        "height": 29
+      }
+    },
+    {
+      "id": "1:414",
+      "name": "Vector",
+      "type": "VECTOR",
+      "box": {
+        "x": 101,
+        "y": 109,
+        "width": 29,
+        "height": 29
+      }
+    },
+    {
+      "id": "1:415",
+      "name": "Vector",
+      "type": "VECTOR",
+      "box": {
+        "x": 101,
+        "y": 138,
+        "width": 29,
+        "height": 29
+      }
+    },
+    {
+      "id": "1:417",
+      "name": "Login page",
+      "type": "TEXT",
+      "box": {
+        "x": 938,
+        "y": 937,
+        "width": 487,
+        "height": 120
+      },
+      "text": "Login page"
+    },
+    {
+      "id": "1:418",
+      "name": "By Kanha Jatthap",
+      "type": "TEXT",
+      "box": {
+        "x": 1486,
+        "y": 1057,
+        "width": 419,
+        "height": 59
+      },
+      "text": "By Kanha Jatthap"
+    }
+  ],
+  "text_content": [
+    "Adaptable performance",
+    "Our product effortlessly adjusts to your needs, boosting\nefficiency and simplifying your tasks.",
+    "Built to last",
+    "Experience unmatched durability that goes above and beyond\nwith lasting investment.",
+    "Great user experience",
+    "Integrate our product into your routine with an intuitive and\neasy-to-use interface.",
+    "Innovative functionality",
+    "Stay ahead with features that set new standards, addressing\nyour evolving needs better than the rest.",
+    "Sign in",
+    "Email",
+    "your@email.com",
+    "Password",
+    "Forgot your password?",
+    "\u2022\u2022\u2022\u2022\u2022\u2022",
+    "Remember me",
+    "Sign in",
+    "Don't have an account? ",
+    "Sign up",
+    "or",
+    "Sign in with Google",
+    "Sign in with Facebook",
+    "FREE",
+    "Free Figma Community File",
+    "Figma",
+    "Login page",
+    "By Kanha Jatthap"
+  ],
+  "style_tokens": [
+    "#000000",
+    "#0ACF83",
+    "#0B0E14",
+    "#1ABCFE",
+    "#1FBB96",
+    "#292929",
+    "#34A853",
+    "#4285F4",
+    "#47536B",
+    "#566481",
+    "#860000",
+    "#A259FF",
+    "#A5102E",
+    "#EA4335",
+    "#EBEEF4",
+    "#F24E1E",
+    "#F5F6FA",
+    "#FBBC05",
+    "#FCFCFC",
+    "#FF7262",
+    "#FFFFFF"
+  ],
+  "screenshot_url": "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/62c5c1d7-1678-47a4-b878-5d3aac1ea689"
+}
