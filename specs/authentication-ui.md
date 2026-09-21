@@ -1,5 +1,5 @@
 ---
-status: approved
+status: draft
 feature: authentication-ui
 inputs:
   design: design/authentication-ui.json
@@ -9,50 +9,42 @@ inputs:
 # Authentication UI — Requirement Specification
 
 ## Overview
-A login screen (email + password) with links to a not-yet-built signup flow and a
-not-yet-built password-reset flow. This sprint builds the login/signup UI and the
-auth check itself; everything downstream (dashboard, password reset) already exists
-or is out of scope.
+A login and signup UI for the product, built from the "Modern Login Page UI Template" Figma mock. This sprint covers only the authentication screens and the auth check itself — nothing downstream or adjacent (password reset, account settings) is in scope.
 
 ## Source Inputs
-- Design: "Cover" frame, pulled from `https://www.figma.com/design/ehm86HJ49MkaEuOzvITTpW/Modern-Login-Page-UI-Template--Free---Community-?node-id=1-202`
-- Transcript: `auth-ui-kickoff.vtt` — Product Owner, Developer, and Tester aligning scope before sprint start.
+- Design: "Cover" frame (node 1:202), pulled from https://www.figma.com/design/ehm86HJ49MkaEuOzvITTpW/Modern-Login-Page-UI-Template--Free---Community-?node-id=1-202
+- Transcript: `auth-ui-kickoff.vtt` — kickoff call with Product Owner, Developer, and Tester
 
 ## In Scope
-- Login screen with **Email** and **Password** fields (`Label → Email`, `Label → Password`,
-  placeholder `your@email.com`, masked password `••••••`).
-- Primary submit button, labeled **"Sign in"** in the design.
-- **"Forgot your password?"** link — renders visually only, not wired to a flow (PO: separate ticket next sprint).
-- **"Don't have an account? Sign up"** line — the "Sign up" link points to a stub, not a built signup screen (PO: stub only this sprint).
-- On successful login, route to the existing dashboard route (dashboard itself is pre-existing, out of scope here).
-- The auth check behind the login submit.
+- Login screen with Email and Password fields (labels "Email" / "Password", placeholder "your@email.com")
+- Primary "Sign in" button
+- "Forgot your password?" link — renders visually only, not wired to a flow this sprint
+- "Don't have an account? Sign up" link — points to a stub for now
+- Successful login routes to the existing dashboard route (dashboard itself is out of scope)
+- The auth check for login itself
 
 ## Out of Scope
-- Password-reset flow — explicitly deferred by PO to next sprint's ticket.
-- Account-settings screen — explicitly excluded by PO ("leave those out entirely for now").
-- A built-out signup screen/form — PO confirmed the sign-up link is a stub this sprint; the design extract also contains no signup-form fields, only the login frame.
-- Anything downstream of successful login (the dashboard itself) — PO: "not anything downstream of it."
-- Social sign-in ("Sign in with Google", "Sign in with Facebook") and "Remember me" — present in the design frame but never raised or confirmed in scope during the kickoff; not included pending PO confirmation (see Open Questions).
+- Password-reset flow — explicitly deferred to a separate ticket next sprint
+- Account-settings screen — explicitly excluded from this ticket
+- Anything downstream of a successful login beyond routing to the existing dashboard
+- Wiring the "Forgot your password?" and "Sign up" links to real flows — visual/stub only this sprint
+- "Remember me" checkbox and "Sign in with Google" / "Sign in with Facebook" buttons — present in the design mock but not mentioned in the kickoff scope discussion; not confirmed as in-scope functionality this sprint
 
 ## User Stories
 
-**1. As a user, I can log in with email and password.**
-- Given the login screen, when I enter a valid email and password and submit, then the auth check runs and on success I'm routed to the dashboard.
-- Fields: `Email` (placeholder `your@email.com`), `Password` (masked).
-- Submit button reads "Sign in".
+**1. As a user, I can enter my credentials and sign in.**
+- Given the login screen, I see labeled "Email" and "Password" fields (placeholder "your@email.com" for email)
+- When I submit valid credentials via the "Sign in" button, I am routed to the existing dashboard route
+- When credentials are invalid, an error is shown (exact messaging: see Open Questions)
 
-**2. As a user, I can see a "Forgot your password?" link, but it does nothing yet.**
-- Given the login screen, when I view it, then the "Forgot your password?" link renders visually.
-- Acceptance: clicking it is not wired to a real flow this sprint.
+**2. As a user, I can see a "Forgot your password?" link.**
+- Given the login screen, the "Forgot your password?" link is rendered
+- When I click it, no working flow is required this sprint (visual only)
 
-**3. As a user, I can see a way to get to sign up, even though sign up isn't built yet.**
-- Given the login screen, when I view the bottom line "Don't have an account? Sign up", then the "Sign up" text is a link/stub.
-- Acceptance: it does not need to lead to a functioning signup screen this sprint.
-
-**4. As a user, I get routed to the dashboard after a successful login.**
-- Given valid credentials submitted, when the auth check passes, then I am routed to the existing dashboard route.
-- Acceptance: no new dashboard work — the route already exists.
+**3. As a user, I can see a path to sign up.**
+- Given the login screen, "Don't have an account? Sign up" is rendered
+- When I click "Sign up", it points to a stub (no working signup screen required yet, since no signup screen design has been provided — see Open Questions)
 
 ## Open Questions
-- Error messaging on failed login: should a wrong password vs. an unrecognized email show distinct inline errors, or one generic error? PO explicitly deferred this to spec review rather than deciding in the kickoff.
-- Are the "Remember me" checkbox and the "Sign in with Google" / "Sign in with Facebook" buttons (present in the design frame) in scope for this sprint? Not discussed in the kickoff — needs PO confirmation before being added to scope.
+- Should login validation show distinct inline errors for "wrong password" vs. "unrecognized email," or a single generic error message? PO deferred this decision to spec review.
+- No signup-screen design has been provided yet (only a "Sign up" link/stub on the login mock) — needed before signup fields/layout can be specified.
