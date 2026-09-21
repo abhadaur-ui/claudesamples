@@ -6,7 +6,10 @@ A PreToolUse hook. Claude Code runs this automatically before every Edit/Write/
 MultiEdit call, feeding it a JSON description of the tool call on stdin. This
 script reads that JSON, and if the edit targets real source code (backend/ or
 frontend/), refuses to let it proceed unless BOTH specs/<feature>.md and
-plans/<feature>.md say `status: approved` in their front-matter.
+plans/<feature>.md are present on main (i.e. merged) — a merged PR is the
+approval signal under the single-PR-approval model (see .claude/skills/
+spec-writer and plan-writer). There is no `status:` front-matter field
+anymore; do not reintroduce a check for one.
 
 Exit code 0  -> allow the tool call
 Exit code 2  -> block it; stderr is fed back to Claude as the reason
@@ -46,17 +49,19 @@ def current_feature_from_branch() -> str | None:
     return m.group(1) if m else None
 
 
-def read_frontmatter_status(md_path: str) -> str | None:
-    p = Path(md_path)
-    if not p.exists():
-        return None
-    text = p.read_text()
-    m = re.match(r"^---\s*\n(.*?)\n---\s*\n", text, re.DOTALL)
-    if not m:
-        return None
-    fm = m.group(1)
-    sm = re.search(r"^status:\s*(\S+)", fm, re.MULTILINE)
-    return sm.group(1) if sm else None
+def is_merged_to_main(md_path: str) -> bool:
+    # A file counts as "approved" once it exists on main - that merge IS the
+    # approval under the single-PR-approval model, no status field to check.
+    for ref in ("main", "origin/main"):
+        try:
+            subprocess.check_output(
+                ["git", "cat-file", "-e", f"{ref}:{md_path}"],
+                stderr=subprocess.DEVNULL,
+            )
+            return True
+        except Exception:
+            continue
+    return False
 
 
 def main():
@@ -86,17 +91,17 @@ def main():
         )
         sys.exit(2)
 
-    spec_status = read_frontmatter_status(f"specs/{feature}.md")
-    plan_status = read_frontmatter_status(f"plans/{feature}.md")
+    spec_merged = is_merged_to_main(f"specs/{feature}.md")
+    plan_merged = is_merged_to_main(f"plans/{feature}.md")
 
-    if spec_status != "approved" or plan_status != "approved":
+    if not spec_merged or not plan_merged:
         print(
             f"BLOCKED: writing to {file_path} requires both "
-            f"specs/{feature}.md and plans/{feature}.md to be approved.\n"
-            f"  specs/{feature}.md  status = {spec_status!r}\n"
-            f"  plans/{feature}.md  status = {plan_status!r}\n"
-            "Both must be merged PRs with status: approved before any code "
-            "may be written for this feature.",
+            f"specs/{feature}.md and plans/{feature}.md to be merged to main.\n"
+            f"  specs/{feature}.md  merged to main = {spec_merged}\n"
+            f"  plans/{feature}.md  merged to main = {plan_merged}\n"
+            "Both must land on main via a merged PR (the merge is the "
+            "approval) before any code may be written for this feature.",
             file=sys.stderr,
         )
         sys.exit(2)
