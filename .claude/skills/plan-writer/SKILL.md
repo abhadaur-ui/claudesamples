@@ -1,6 +1,6 @@
 ---
 name: plan-writer
-description: Turns an approved requirement specification (specs/<feature>.md) into a build plan and test list (plans/<feature>.md), submitted as a PR for Dev + Tester review — the merged PR is the approval. Use once a spec exists and has been merged to main.
+description: Turns an approved requirement specification (specs/<feature>.md) into a build plan and test list (plans/<feature>.md), submitted as a PR for Dev + Tester review — the merged PR is the approval. Also files the spec's user stories to Jira. Use once a spec exists and has been merged to main.
 ---
 
 # plan-writer
@@ -71,6 +71,29 @@ Restate the spec's Out of Scope section here too, so a reviewer approving the
 Open one PR containing `plans/<feature>.md`. There is no `status` field and no
 second "approval" PR — Dev + Tester reviewing and merging this PR **is** the
 approval. Do not merge it yourself.
+
+## After the plan PR is opened — file Jira stories
+
+Once `plans/<feature>.md` is drafted and its PR is open, file the spec's user
+stories to Jira (this happens once, when drafting the plan — not gated on the
+plan PR merging, since Jira tracking should exist while the plan is under review):
+
+1. Read `jira/config.json` for `cloud_id`, `project_key`, `issue_type`. If this
+   file is missing, skip this section entirely and tell the user it needs to be
+   created first — do not guess a project key.
+2. Read `jira/<feature>.json` if it exists — an array of
+   `{ "story_number": N, "key": "...", "summary": "..." }`. Skip any
+   `story_number` already recorded there; this is what makes re-running
+   `plan-writer` on the same feature safe (no duplicate tickets).
+3. For each remaining `**N. As a ... I can ...**` block under the spec's
+   `## User Stories` section: the bold line is the Jira `summary`; the
+   given/when/then and acceptance bullets beneath it form the `description`.
+   Create the issue with `mcp__claude_ai_Atlassian__createJiraIssue`
+   (`cloudId`, `projectKey`, `issueTypeName` from `jira/config.json`). Never
+   invent a story that isn't literally in that section.
+4. Append the newly created `{story_number, key, summary}` entries to
+   `jira/<feature>.json` (create the file if it didn't exist).
+5. Report the created Jira keys to the user alongside the plan PR link.
 
 ## Hard rules
 
