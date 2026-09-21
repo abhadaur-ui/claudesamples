@@ -1,6 +1,6 @@
 ---
 name: spec-writer
-description: Turns a Figma design export (design/<feature>.json) and a meeting transcript (meetings/*.vtt) into a draft requirement specification (specs/<feature>.md), locked behind PO approval before any build work starts. Use when a feature's design and kickoff discussion both exist and a spec hasn't been drafted yet.
+description: Turns a Figma design export (design/<feature>.json) and a meeting transcript (meetings/*.vtt) into a requirement specification (specs/<feature>.md), submitted as a PR for PO review — the merged PR is the approval. Use when a feature's design and kickoff discussion both exist and a spec hasn't been drafted yet.
 ---
 
 # spec-writer
@@ -25,7 +25,6 @@ Write `specs/<feature>.md` with this structure:
 
 ```markdown
 ---
-status: draft
 feature: <feature>
 inputs:
   design: design/<feature>.json
@@ -59,6 +58,12 @@ Anything the transcript flagged as undecided. Do not guess an answer and do not
 quietly drop the question — it belongs here, for the PO to resolve during approval.
 ```
 
+## Submitting for approval
+
+Open one PR containing `specs/<feature>.md`. There is no `status` field and no
+second "approval" PR — the PO reviewing and merging this PR **is** the approval.
+Do not merge it yourself.
+
 ## Hard rules
 
 - **Never invent scope the transcript didn't confirm**, even if the design shows it
@@ -68,8 +73,5 @@ quietly drop the question — it belongs here, for the PO to resolve during appr
 - **Every field/button referenced in a user story must trace back to `text_content`
   or a named node in `design/<feature>.json`.** If it doesn't appear there, it doesn't
   belong in this spec.
-- **`status` starts as `draft` and stays `draft`.** Only a human flipping it to
-  `approved` (via a merged PR, per the workflow this skill feeds into) changes that —
-  never set it to `approved` yourself.
 - Keep it lean — this is the same "high-value content only" discipline as CLAUDE.md
   itself. No pasted transcript text beyond short, attributed paraphrases.

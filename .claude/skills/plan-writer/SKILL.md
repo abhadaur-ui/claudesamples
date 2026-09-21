@@ -1,16 +1,18 @@
 ---
 name: plan-writer
-description: Turns an approved requirement specification (specs/<feature>.md) into a build plan and test list (plans/<feature>.md), locked behind a second approval (Dev + Tester) before any code gets written. Use once a spec exists and its status has been confirmed approved.
+description: Turns an approved requirement specification (specs/<feature>.md) into a build plan and test list (plans/<feature>.md), submitted as a PR for Dev + Tester review — the merged PR is the approval. Use once a spec exists and has been merged to main.
 ---
 
 # plan-writer
 
 ## Precondition — check this before doing anything else
 
-Read `specs/<feature>.md`'s front-matter. **If `status` is not exactly `approved`,
-stop immediately and tell the user why** — do not draft a plan against a spec that's
-still `draft`, no matter how confident it looks or how much the human asking seems
-to want you to proceed. A spec awaiting review is not a spec you build against.
+Confirm `specs/<feature>.md` exists **on main** (i.e. its PR has been merged) —
+**if it's only on a branch/PR that hasn't merged yet, stop immediately and tell
+the user why**, no matter how confident it looks or how much the human asking
+seems to want you to proceed. A spec awaiting review is not a spec you build
+against. There is no `status` field to check — a merged spec PR is the only
+approval signal.
 
 This mirrors `spec-writer`'s own rule about never inventing scope: here, the
 equivalent discipline is never skipping the approval check because it's inconvenient
@@ -33,10 +35,8 @@ Write `plans/<feature>.md`:
 
 ```markdown
 ---
-status: draft
 feature: <feature>
 spec: specs/<feature>.md
-spec_approved_at: <the spec's own approval, referenced not re-verified by you>
 ---
 
 # <Feature Name> — Build Plan
@@ -66,12 +66,16 @@ Restate the spec's Out of Scope section here too, so a reviewer approving the
 *plan* doesn't have to flip back to the spec to check the boundary is still intact.
 ```
 
+## Submitting for approval
+
+Open one PR containing `plans/<feature>.md`. There is no `status` field and no
+second "approval" PR — Dev + Tester reviewing and merging this PR **is** the
+approval. Do not merge it yourself.
+
 ## Hard rules
 
-- **Never set `status` to `approved` yourself** — same rule as `spec-writer`. Only
-  a human, via a merged PR, changes that.
-- **Never draft a plan for an unapproved spec** — this is the one rule this skill
-  exists to enforce; everything else is secondary to it.
+- **Never draft a plan for a spec that hasn't merged to main** — this is the one
+  rule this skill exists to enforce; everything else is secondary to it.
 - If the spec's Open Questions section isn't empty, the plan may proceed, but must
   flag which checkpoints are blocked or affected by each open question rather than
   quietly assuming an answer.
