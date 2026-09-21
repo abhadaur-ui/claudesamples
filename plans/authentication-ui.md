@@ -1,5 +1,5 @@
 ---
-status: approved
+status: draft
 feature: authentication-ui
 spec: specs/authentication-ui.md
 spec_approved_at: specs/authentication-ui.md (status: approved)
