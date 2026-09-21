@@ -1,5 +1,5 @@
 ---
-status: approved
+status: draft
 feature: authentication-ui
 inputs:
   design: design/authentication-ui.json
