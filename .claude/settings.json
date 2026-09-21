@@ -7,7 +7,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python3 .claude/hooks/require_approved_spec_and_plan.py"
+            "command": "python .claude/hooks/require_approved_spec_and_plan.py"
           }
         ]
       }
