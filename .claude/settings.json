@@ -4,7 +4,9 @@
     "ask": [
       "Bash(gh pr create *)",
       "Bash(gh pr merge *)",
-      "Bash(gh pr close *)"
+      "Bash(gh pr close *)",
+      "Bash(git rm *)",
+      "Bash(git push origin main*)"
     ]
   },
   "hooks": {
