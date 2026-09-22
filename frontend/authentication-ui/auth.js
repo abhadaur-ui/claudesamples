@@ -8,6 +8,17 @@ function isFormValid(email, password) {
   return Boolean(email) && Boolean(password);
 }
 
+// ponytail: outcome-only (ok/not-ok) per spec's open question on error-message
+// granularity — split into per-cause messages once the PO decides.
+async function attemptLogin(email, password, fetchImpl) {
+  const response = await fetchImpl(AUTH_ENDPOINT, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ email, password }),
+  });
+  return response.ok;
+}
+
 if (typeof document !== "undefined") {
   const form = document.getElementById("login-form");
   const emailInput = document.getElementById("email");
@@ -22,13 +33,9 @@ if (typeof document !== "undefined") {
       return;
     }
 
-    const response = await fetch(AUTH_ENDPOINT, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email: emailInput.value, password: passwordInput.value }),
-    });
+    const ok = await attemptLogin(emailInput.value, passwordInput.value, fetch);
 
-    if (response.ok) {
+    if (ok) {
       window.location.href = DASHBOARD_ROUTE;
     } else {
       errorMessage.hidden = false;
@@ -37,5 +44,5 @@ if (typeof document !== "undefined") {
 }
 
 if (typeof module !== "undefined") {
-  module.exports = { isFormValid };
+  module.exports = { isFormValid, attemptLogin, AUTH_ENDPOINT, DASHBOARD_ROUTE };
 }

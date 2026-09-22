@@ -45,7 +45,7 @@ def current_feature_from_branch() -> str | None:
         return None
     if not branch:
         return None
-    m = re.match(r"^(?:feature|bugfix)/([a-zA-Z0-9\-]+)", branch)
+    m = re.match(r"^(?:feature|bugfix|build)/([a-zA-Z0-9\-]+)", branch)
     return m.group(1) if m else None
 
 
@@ -85,7 +85,7 @@ def main():
     if not feature:
         print(
             "BLOCKED: could not determine feature from branch name "
-            "(expected feature/<name> or bugfix/<name>). Refusing to write "
+            "(expected feature/<name>, bugfix/<name>, or build/<name>). Refusing to write "
             f"to {file_path} without a known spec/plan to check against.",
             file=sys.stderr,
         )
