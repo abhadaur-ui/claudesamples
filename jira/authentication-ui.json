@@ -1,0 +1,6 @@
+[
+  { "story_number": 1, "key": "CDEMO-8", "summary": "Sign in with email and password" },
+  { "story_number": 2, "key": "CDEMO-9", "summary": "See a \"Forgot your password?\" link" },
+  { "story_number": 3, "key": "CDEMO-10", "summary": "Navigate toward sign up" },
+  { "story_number": 4, "key": "CDEMO-11", "summary": "Land on the dashboard after login" }
+]
